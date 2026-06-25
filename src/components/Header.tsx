@@ -6,7 +6,7 @@ import { useState } from "react";
 const navItems = [
   ["Home", "#home"],
   ["Work", "#work"],
-  ["AI Tools", "#tools"],
+  ["AI Videos", "#ai-videos"],
   ["Experience", "#experience"],
   ["About", "#about"],
   ["Contact", "#contact"],

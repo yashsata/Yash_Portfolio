@@ -93,30 +93,17 @@ export const videos: PortfolioVideo[] = videoSource.map((video) => ({
 }));
 
 export const featuredVideos = videos.filter((video) => video.featured);
-export const otherVideos = videos.filter((video) => !video.featured);
 
-export const tools = [
-  "Kling",
-  "Runway",
-  "Hailuo",
-  "Sora",
-  "Higgsfield",
-  "Google Veo 3.1",
-  "Google Flow",
-  "Minimax Hailuo",
-  "Wan 2.5",
-  "Luma AI",
-  "Midjourney",
-  "Google Vertex",
-  "Google Nano Banana",
-  "OpenArt",
-  "Freepik",
-  "Firefly",
-  "YouCam",
-  "Topaz",
-  "Claude",
-  "ChatGPT",
-];
+const featuredVideosAlsoShownInAIVideos = new Set([
+  "WPpKKC3HS6I",
+  "8R6GZw-MeUc",
+  "pG4nJjog-1Y",
+]);
+
+export const aiVideos = videos.filter(
+  (video) =>
+    !video.featured || featuredVideosAlsoShownInAIVideos.has(video.id),
+);
 
 export const experience = [
   {

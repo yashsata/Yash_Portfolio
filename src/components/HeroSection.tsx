@@ -16,7 +16,7 @@ import { videos } from "@/data/portfolio";
 import { getYouTubeEmbed, getYouTubeThumbnail } from "@/lib/youtube";
 import { useVideoPlayback } from "./VideoPlaybackProvider";
 
-const heroVideo = videos[0];
+const heroVideo = videos.find((video) => video.title === "Devil") ?? videos[0];
 const heroPlayerKey = `hero-${heroVideo.id}`;
 
 export function HeroSection() {
