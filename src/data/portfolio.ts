@@ -31,19 +31,16 @@ const videoSource = [
     url: "https://youtu.be/WPpKKC3HS6I?si=9hDcw3Tdg4C-ewrb",
     title: "Drive",
     category: "Music Video / T-Series",
-    featured: true,
   },
   {
     url: "https://youtu.be/8R6GZw-MeUc?si=_vUt87xmEUgBcTeK",
     title: "Rap God",
     category: "AI Visuals / T-Series",
-    featured: true,
   },
   {
     url: "https://youtu.be/pG4nJjog-1Y?si=yegJKArJlEpMJ0lF",
     title: "Ghama Di Raat",
     category: "Cinematic Visuals / T-Series",
-    featured: true,
   },
   {
     url: "https://youtu.be/sgJpwwAw5Jc?si=njEDnme4kL07HiVL",
@@ -93,17 +90,7 @@ export const videos: PortfolioVideo[] = videoSource.map((video) => ({
 }));
 
 export const featuredVideos = videos.filter((video) => video.featured);
-
-const featuredVideosAlsoShownInAIVideos = new Set([
-  "WPpKKC3HS6I",
-  "8R6GZw-MeUc",
-  "pG4nJjog-1Y",
-]);
-
-export const aiVideos = videos.filter(
-  (video) =>
-    !video.featured || featuredVideosAlsoShownInAIVideos.has(video.id),
-);
+export const aiVideos = videos;
 
 export const experience = [
   {
