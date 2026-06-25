@@ -13,7 +13,7 @@ export function FeaturedWork() {
         eyebrow=""
         title="Featured work"
         action={
-          <a className="text-link" href="#other-work">
+          <a className="text-link" href="#ai-videos">
             View all <ArrowRight aria-hidden="true" />
           </a>
         }
@@ -23,15 +23,15 @@ export function FeaturedWork() {
   );
 }
 
-export function OtherWorksPanel() {
+export function AIVideos() {
   return (
     <section
-      className="content-section glass-panel overview-panel other-work-panel"
-      id="other-work"
+      className="content-section section-shell glass-panel ai-videos-panel"
+      id="ai-videos"
     >
       <SectionHeading
         eyebrow=""
-        title="Other works"
+        title="AI videos"
         action={
           <a className="text-link" href="#contact">
             View all <ArrowRight aria-hidden="true" />

@@ -4,10 +4,9 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import {
+  AIVideos,
   FeaturedWork,
-  OtherWorksPanel,
 } from "@/components/PortfolioVideos";
-import { ToolsSection } from "@/components/ToolsSection";
 import { VideoPlaybackProvider } from "@/components/VideoPlaybackProvider";
 
 export default function Home() {
@@ -17,10 +16,7 @@ export default function Home() {
         <Header />
         <HeroSection />
         <FeaturedWork />
-        <section className="overview-grid section-shell">
-          <ToolsSection />
-          <OtherWorksPanel />
-        </section>
+        <AIVideos />
         <ExperienceSection />
         <AboutSection />
         <ContactFooter />
