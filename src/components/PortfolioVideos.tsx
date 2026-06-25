@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { featuredVideos, otherVideos } from "@/data/portfolio";
+import { aiVideos, featuredVideos } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { VideoGrid } from "./VideoGrid";
 
@@ -38,7 +38,7 @@ export function AIVideos() {
           </a>
         }
       />
-      <VideoGrid videos={otherVideos} playerGroup="archive" compact />
+      <VideoGrid videos={aiVideos} playerGroup="archive" compact />
     </section>
   );
 }

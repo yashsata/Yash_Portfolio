@@ -93,7 +93,17 @@ export const videos: PortfolioVideo[] = videoSource.map((video) => ({
 }));
 
 export const featuredVideos = videos.filter((video) => video.featured);
-export const otherVideos = videos.filter((video) => !video.featured);
+
+const featuredVideosAlsoShownInAIVideos = new Set([
+  "WPpKKC3HS6I",
+  "8R6GZw-MeUc",
+  "pG4nJjog-1Y",
+]);
+
+export const aiVideos = videos.filter(
+  (video) =>
+    !video.featured || featuredVideosAlsoShownInAIVideos.has(video.id),
+);
 
 export const experience = [
   {
