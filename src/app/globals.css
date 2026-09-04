@@ -710,12 +710,28 @@ main {
     border-color 240ms ease;
 }
 
-.video-card.compact:nth-last-child(2) {
+.video-card.compact:last-child:nth-child(4n + 1) {
+  grid-column: 4 / span 2;
+}
+
+.video-card.compact:nth-last-child(2):nth-child(4n + 1) {
   grid-column: 3 / span 2;
 }
 
-.video-card.compact:last-child {
+.video-card.compact:last-child:nth-child(4n + 2) {
   grid-column: 5 / span 2;
+}
+
+.video-card.compact:nth-last-child(3):nth-child(4n + 1) {
+  grid-column: 2 / span 2;
+}
+
+.video-card.compact:nth-last-child(2):nth-child(4n + 2) {
+  grid-column: 4 / span 2;
+}
+
+.video-card.compact:last-child:nth-child(4n + 3) {
+  grid-column: 6 / span 2;
 }
 
 .video-card.compact .video-aspect {
@@ -1064,12 +1080,16 @@ main {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
-  .video-card.compact:nth-last-child(2) {
+  .video-card.compact:nth-last-child(2):nth-child(3n + 1) {
     grid-column: 2 / span 2;
   }
 
-  .video-card.compact:last-child {
+  .video-card.compact:last-child:nth-child(3n + 2) {
     grid-column: 4 / span 2;
+  }
+
+  .video-card.compact:last-child:nth-child(3n + 1) {
+    grid-column: 3 / span 2;
   }
 
   .about-panel {
@@ -1174,9 +1194,22 @@ main {
   }
 
   .video-card.compact,
-  .video-card.compact:nth-last-child(2),
-  .video-card.compact:last-child {
+  .video-card.compact:nth-last-child(3):nth-child(4n + 1),
+  .video-card.compact:nth-last-child(2):nth-child(4n + 1),
+  .video-card.compact:nth-last-child(2):nth-child(4n + 2),
+  .video-card.compact:last-child:nth-child(4n + 1),
+  .video-card.compact:last-child:nth-child(4n + 2),
+  .video-card.compact:last-child:nth-child(4n + 3),
+  .video-card.compact:nth-last-child(2):nth-child(3n + 1),
+  .video-card.compact:last-child:nth-child(3n + 1),
+  .video-card.compact:last-child:nth-child(3n + 2) {
     grid-column: span 1;
+  }
+
+  .video-card.compact:last-child:nth-child(odd) {
+    width: calc((100% - 9px) / 2);
+    justify-self: center;
+    grid-column: 1 / -1;
   }
 
   .experience-card {
