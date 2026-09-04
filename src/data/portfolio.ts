@@ -82,6 +82,21 @@ const videoSource = [
     title: "Sorry",
     category: "Music Video / T-Series",
   },
+  {
+    url: "https://youtu.be/dHtHXKtOWaE?si=28jEhnRCWgpTfzr6",
+    title: "Maa Kamakhya ke Rahasya",
+    category: "Mythology",
+  },
+  {
+    url: "https://youtu.be/f3znLsqFbUc?si=sZDPFK5JUP3dNEpX",
+    title: "Vaastu Purush",
+    category: "Mythology",
+  },
+  {
+    url: "https://youtu.be/4mdibaqRKME?si=dx0VgSRQj0fYf0gi",
+    title: "Sudarshan Chakra",
+    category: "Mythology",
+  },
 ] as const;
 
 export const videos: PortfolioVideo[] = videoSource.map((video) => ({
